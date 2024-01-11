@@ -1,0 +1,8 @@
+@use '../abstract' as *;
+
+.card {
+  @apply .bg-background, .p-5;
+
+  border-radius: $border-radius-xl;
+  border: 1px solid get-theme-color('gray');
+}

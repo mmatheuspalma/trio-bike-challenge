@@ -1,0 +1,19 @@
+@use '../abstract' as *;
+
+.menu {
+  padding-left: unset;
+
+  @include modifier('inline') {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  li {
+    list-style: none;
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: unset;
+    }
+  }
+}

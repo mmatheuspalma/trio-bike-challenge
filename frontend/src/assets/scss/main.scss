@@ -1,0 +1,30 @@
+/// App main stylesheet
+///
+/// NOTE: project styles should follow SASS 7-1 Architecture
+/// @see https://sass-guidelin.es/#the-7-1-pattern
+
+@charset "utf-8";
+
+// 1. Themes Configuration
+@use 'themes/default' as theme;
+
+// 2. Configuration and helpers
+@use 'abstract' with ($colors: theme.$colors);
+
+// 3. Vendors
+@use 'vendors';
+
+// 4. Base stuff
+@use 'base';
+
+// 5. Layout-related sections
+@use 'layout';
+
+// 6. Components
+@use 'components';
+
+// 7. Page-specific styles
+@use 'pages';
+
+// 8. Helpers (needs  to be at end to allow overwriting properties correctly)
+@use 'base/helpers'

@@ -1,0 +1,36 @@
+@use '../abstract' as *;
+
+.alert {
+  border: 1px #000 solid;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 14px 20px;
+  border-radius: $border-radius-md;
+
+  &__title {
+    color: #000;
+    font-size: 1.5rem;
+  }
+
+  &__message {
+    color: #000;
+    font-size: 1rem;
+    margin: 0px;
+  }
+
+  @include modifier('warning') {
+    background-color: get-theme-color('secondary');
+    border-color:  get-theme-color('secondary');
+  }
+
+  @include modifier('error') {
+    background-color: red;
+    border-color: red;
+
+    .alert__title,
+    .alert__message {
+      color: #fff;
+    }
+  }
+}

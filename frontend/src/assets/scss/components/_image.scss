@@ -1,0 +1,27 @@
+/// Image component
+/// =================================
+///
+
+@use '../abstract' as *;
+
+@include block('image') {
+  position: relative;
+  z-index: 1;
+
+  @include modifier('cover') {
+    @apply .w-full, .h-full;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  @include modifier('lazy') {
+    &::before {
+      @apply .w-full, .h-full, .absolute;
+
+      content: '';
+      z-index: 0;
+      background: #cecece;
+    }
+  }
+}

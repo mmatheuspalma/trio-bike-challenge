@@ -1,0 +1,33 @@
+/// Typography
+/// =================================
+/// - Base
+/// - Paragraphs
+/// - Headings
+/// - Type sizes
+/// - Misc
+/// - Utilities
+///
+/// Body font size, leadings etc have been set in _variables.scss
+
+@use 'sass:list';
+@use '../abstract' as *;
+
+html {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font: 400 $font-size-base $font-family-base;
+	text-size-adjust: 100%;
+}
+
+
+@include snug-variants('responsive') using ($props...) {
+  // background
+  .font {
+    /// background-color
+    @include snug-options($fonts, $props...) using ($value) {
+      font-family: list.nth($value, 1);
+    }
+  }
+}

@@ -1,0 +1,7 @@
+// Vitest Snapshot v1
+
+exports[`BikeBookmark > renders correctly 1`] = `
+"<div class=\\"bike-bookmark\\" data-v-1f9ffc06=\\"\\">
+  <div class=\\"icon text-base\\" data-v-6ea13f32=\\"\\" data-v-1f9ffc06=\\"\\"><em class=\\"fa-regular fa-heart\\" data-v-6ea13f32=\\"\\"></em></div>
+</div>"
+`;

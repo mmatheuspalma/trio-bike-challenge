@@ -1,0 +1,13 @@
+@use '../abstract' as *;
+
+.header {
+  background-color: get-theme-color('primary');
+  color: get-theme-color('white');
+  // min-height: 275px;
+  border-bottom-left-radius: $border-radius-xl;
+  border-bottom-right-radius: $border-radius-xl;
+
+  @include element('content') {
+    min-height: 275px;
+  }
+}

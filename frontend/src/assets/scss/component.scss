@@ -1,0 +1,10 @@
+/// Component focused stylesheet
+///
+/// This stylesheet will be injected on each component.
+/// It should contain only the necessary to access functions, mixins and variables.
+///
+///
+
+@forward 'abstract';
+
+@import 'themes/default';

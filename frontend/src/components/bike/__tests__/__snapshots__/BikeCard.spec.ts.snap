@@ -1,0 +1,31 @@
+// Vitest Snapshot v1
+
+exports[`BikeCard > renders correctly 1`] = `
+"<div class=\\"bike-card\\" data-v-2b14ae81=\\"\\">
+  <div class=\\"card\\" data-v-8955d826=\\"\\" data-v-2b14ae81=\\"\\">
+    <div class=\\"card__image\\" data-v-8955d826=\\"\\">
+      <div class=\\"bike-card__image\\" data-v-2b14ae81=\\"\\"><a href=\\"/details/1\\" class=\\"\\" data-v-2b14ae81=\\"\\"><img class=\\"image image--lazy\\" data-v-ff3f7011=\\"\\" data-v-2b14ae81=\\"\\"></a></div>
+      <div class=\\"bike-card__bookmark\\" data-v-2b14ae81=\\"\\">
+        <div class=\\"bike-bookmark\\" data-v-1f9ffc06=\\"\\" data-v-2b14ae81=\\"\\">
+          <div class=\\"icon text-base\\" data-v-6ea13f32=\\"\\" data-v-1f9ffc06=\\"\\"><em class=\\"fa-regular fa-heart\\" data-v-6ea13f32=\\"\\"></em></div>
+        </div>
+      </div>
+    </div>
+    <div class=\\"card__title\\" data-v-8955d826=\\"\\">
+      <div class=\\"bike-card__title\\" data-v-2b14ae81=\\"\\">
+        <h3 data-v-2b14ae81=\\"\\"><a href=\\"/details/1\\" class=\\"\\" data-v-2b14ae81=\\"\\">Murazik, Thiel and Robel</a></h3>
+      </div>
+    </div>
+    <div class=\\"card__content\\" data-v-8955d826=\\"\\">
+      <div class=\\"flex items-center\\" data-v-2b14ae81=\\"\\">
+        <div class=\\"chip chip--xs chip--secondary\\" data-v-221b4c58=\\"\\" data-v-2b14ae81=\\"\\">
+          <div class=\\"chip__content\\" data-v-221b4c58=\\"\\">Cyclocross Bicycle</div>
+        </div>
+        <div class=\\"ml-auto\\" data-v-2b14ae81=\\"\\">
+          <div class=\\"bike__price\\" data-v-14e6ff3d=\\"\\" data-v-2b14ae81=\\"\\"><strong data-v-14e6ff3d=\\"\\">135 €</strong>/ Day</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;

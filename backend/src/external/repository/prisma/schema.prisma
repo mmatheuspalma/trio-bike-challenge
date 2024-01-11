@@ -1,0 +1,73 @@
+datasource db {
+  url      = env("DATABASE_URL")
+  provider = "mysql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Bike {
+  id          Int        @unique @default(autoincrement())
+  candidateId Int
+  name        String
+  type        String
+  bodySize    Int
+  maxLoad     Int
+  rate        Int
+  description String     @db.VarChar(200)
+  ratings     Float
+  imageUrls   ImageUrl[]
+  rents BikeRent[]
+  candidate   Candidate  @relation(fields: [candidateId], references: [id])
+
+  @@id([id, candidateId])
+}
+
+model BikeRent {
+  id          Int        @unique @default(autoincrement())
+  candidateId Int
+  bikeId      Int
+  userId      Int
+  dateFrom    DateTime
+  dateTo      DateTime
+  fee         Float
+  rentAmount  Float
+  totalAmount Float
+  rentDays    Int
+
+  candidate   Candidate  @relation(fields: [candidateId], references: [id])
+  bike        Bike  @relation(fields: [bikeId], references: [id])
+  user        User  @relation(fields: [userId], references: [id])
+}
+
+model ImageUrl {
+  id     Int    @unique @default(autoincrement())
+  bikeId Int
+  url    String
+  bike   Bike   @relation(fields: [bikeId], references: [id])
+
+  @@id([id, bikeId])
+}
+
+model User {
+  id          Int       @unique @default(autoincrement())
+  candidateId Int
+  name        String
+  email       String    @unique
+  password    String
+  candidate   Candidate @relation(fields: [candidateId], references: [id])
+  rents       BikeRent[]
+
+  @@id([id, candidateId])
+}
+
+model Candidate {
+  id        Int    @id @default(autoincrement())
+  name      String
+  email     String @unique
+  token     String @unique
+  users     User[]
+  bikes     Bike[]
+  bikeRents BikeRent[]
+}

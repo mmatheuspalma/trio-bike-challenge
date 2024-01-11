@@ -1,0 +1,48 @@
+/// Functions
+/// =================================
+///
+/// Custom SASS methods to help CSS development.
+
+@use 'sass:map' as map;
+@use 'sass:list' as list;
+@use 'sass:meta' as meta;
+
+@use 'variables' as *;
+
+/// get theme color
+///
+/// @param {string} $color - color name
+/// @param {string} $variant - color variant (not available)
+/// @return {color} color or empty case not found
+@function get-theme-color($themeColor, $variant: 'none') {
+  $colorKey: 1;
+  $color: '';
+  $colorMap: ();
+
+  @if map.has-key($colors, $themeColor) {
+    $colorMap: map.get($colors, $themeColor);
+  }
+
+  // TODO: Add proper suport to use color variants
+
+  @if (list-has-index($colorMap, $colorKey)) {
+    $color: list.nth($colorMap, $colorKey);
+  } @else if ($variant != 'none') {
+    $color: map.nth($colorMap, 1);
+  }
+
+  @return $color;
+}
+
+/// check if index exists in a list
+///
+/// @param {list} $list
+/// @param {number} $index - if index is 0, it will return false. SASS lists starts at 1.
+/// @return {boolean}
+@function list-has-index($list, $index) {
+  @if (meta.type-of($list) != 'list' or  $index == 0) {
+    @return false;
+  }
+
+  @return $index <= list.length($list);
+}

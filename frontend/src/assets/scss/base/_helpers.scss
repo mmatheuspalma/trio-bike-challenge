@@ -1,0 +1,158 @@
+@use 'sass:map'as map;
+@use 'sass:list'as list;
+@use '../abstract' as *;
+
+/// spacing classes (padding and margin)
+@include snug-spacing((), $spacing);
+/// display helpers
+@include snug-display();
+/// flex classes
+@include snug-flex();
+
+// container
+.container {
+  width: 100%;
+}
+@include snug-variants('responsive') using ($variant, $breakpoint) {
+  .container {
+    max-width: map.get($breakpoints, map.get($breakpoint, 'rule'));
+
+    @at-root {
+      #{&}--fluid {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@include snug-variants('responsive') using ($props...) {
+  // background
+  .bg {
+    /// background-color
+    @include snug-options($colors, $props...) using ($value) {
+      background-color: list.nth($value, 1);
+    }
+  }
+
+  /// position
+  @include snug-options($position, $props...) using ($value) {
+    position: $value;
+  }
+
+  .top {
+    @include snug-options($position-element, $props...) using ($value) {
+      top: $value;
+    }
+  }
+  .bottom {
+    @include snug-options($position-element, $props...) using ($value) {
+      top: $value;
+    }
+  }
+  .left {
+    @include snug-options($position-element, $props...) using ($value) {
+      top: $value;
+    }
+  }
+  .right {
+    @include snug-options($position-element, $props...) using ($value) {
+      top: $value;
+    }
+  }
+
+  /// width
+  .w {
+    @include snug-options($sizing-width, $props...) using ($value) {
+      width: $value;
+    }
+  }
+  .max-w {
+    @include snug-options($sizing-width, $props...) using ($value) {
+      max-width: $value;
+    }
+  }
+  /// height
+  .h {
+    @include snug-options($sizing-height, $props...) using ($value) {
+      height: $value;
+    }
+  }
+  .max-h {
+    @include snug-options($sizing-height, $props...) using ($value) {
+      max-height: $value;
+    }
+  }
+
+  /// overflow
+  .overflow {
+    @include snug-options($overflow, $props...) using ($value) {
+      overflow: $value;
+    }
+  }
+  .overflow-x {
+    @include snug-options($overflow, $props...) using ($value) {
+      overflow-x: $value;
+    }
+  }
+  .overflow-y {
+    @include snug-options($overflow, $props...) using ($value) {
+      overflow-y: $value;
+    }
+  }
+
+  /// grid
+  .grid-cols {
+    @include snug-options($grid-count, $props...) using ($value) {
+      grid-template-columns: $value;
+    }
+  }
+
+  /// gap
+  .gap {
+    @include snug-options($spacing, $props...) using ($value) {
+      gap: $value;
+    }
+  }
+
+  .gap-x {
+    @include snug-options($spacing, $props...) using ($value) {
+      column-gap: $value;
+    }
+  }
+
+  .gap-y {
+    @include snug-options($spacing, $props...) using ($value) {
+      row-gap: $value;
+    }
+  }
+
+  /// typography
+  .font {
+    /// font-weight
+    @include snug-options($font-weight, $props...) using ($value) {
+      font-weight: $value;
+    }
+  }
+
+  .text {
+    /// color
+    @include snug-options($colors, $props...) using ($value) {
+      color: list.nth($value, 1);
+    }
+    /// text-align
+    @include snug-options($text-align, $props...) using ($value) {
+      text-align: $value;
+    }
+    /// font-size
+    @include snug-options($text-size, $props...) using ($value) {
+      font-size: $value;
+    }
+  }
+
+  .aspect {
+    @include snug-options($aspect-ratio, $props...) using ($value) {
+      aspect-ratio: #{$value};
+    }
+  }
+}
+

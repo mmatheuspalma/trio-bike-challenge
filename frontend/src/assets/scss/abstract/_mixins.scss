@@ -1,0 +1,26 @@
+/// Mixins
+/// =================================
+///
+/// Set of useful SASS mixins to help CSS development.
+///
+
+@use 'sass:map';
+@use 'variables' as *;
+
+@forward '@snug/core' as snug-* with ($breakpoints: $breakpoints);
+@forward '@snug/modules' as snug-*;
+
+@forward 'sass-bem-mixins/index';
+
+/// Generates a media query based on a given size alias.
+///
+/// @param {string} $size
+@mixin breakpoint($size) {
+  $computedSize: map.get($breakpoints, $size);
+
+  @if ($computedSize) {
+    @media only screen and (min-width: $computedSize){
+      @content;
+    }
+  }
+}

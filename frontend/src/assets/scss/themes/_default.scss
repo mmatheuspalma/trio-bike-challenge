@@ -1,0 +1,17 @@
+/// Default Theme
+/// =================================
+/// Handles color and other styles
+
+ $colors: (
+  'black': [#1b1b1b],
+  'white': [#f8f8f8],
+  'gray': [#ededed],
+  'primary': [#1F49D1],
+  'secondary': [#FFD775],
+  'surface': [#fafafa],
+  'background': [#fff],
+  'on-primary': [#C1CFF2],
+  'on-secondary': [#1B1B1B],
+  'error': [#ffcdd2],
+  'success': [#dcedc8],
+);

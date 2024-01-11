@@ -1,0 +1,44 @@
+@use 'sass:color';
+@use '../abstract' as *;
+
+.button {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 14px 20px;
+  border-radius: $border-radius-md;
+  color: get-theme-color('black');
+  background-color: get-theme-color('gray');
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: color.scale(get-theme-color('gray'), $lightness: 10%);
+  }
+
+  @include modifier('primary') {
+    color: get-theme-color('white');
+    background-color: get-theme-color('primary');
+
+    &:hover {
+      background-color: color.scale(get-theme-color('primary'), $lightness: 10%);
+    }
+  }
+  @include modifier('secondary') {
+    color: get-theme-color('black');
+    background-color: get-theme-color('secondary');
+
+    &:hover {
+      background-color: color.scale(get-theme-color('secondary'), $lightness: 10%);
+    }
+  }
+  @include modifier('text') {
+    background-color: unset;
+
+    &:hover {
+      background-color: unset;
+    }
+  }
+
+}

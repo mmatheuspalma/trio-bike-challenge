@@ -1,0 +1,146 @@
+/// Variables
+/// =================================
+/// - Typography
+/// - Breakpoints
+/// - Paths
+/// - Layout & Grid
+/// - App-specific
+
+@use 'sass:map';
+
+$fonts: (
+  'mont': (Mont, sans-serif),
+  'sf-pro': ('SF Pro Display', sans-serif)
+) !default;
+
+$font-size-base: 16px !default;
+$font-family-base: map.get($fonts, 'mont') !default;
+
+$colors: (
+  'black': [#000],
+  'white': [#fff],
+  'gray': [#e7e7e7],
+  'primary': [#ccc],
+  'secondary': [#607d8b],
+  'surface': [#fff],
+  'background': [#fff],
+  'on-primary': [#666],
+  'on-secondary': [#fefefe],
+  'error': [#ff0000],
+  'success': [#00ff00]
+) !default;
+
+
+$border-radius-md: 16px !default;
+$border-radius-lg: 20px !default;
+$border-radius-xl: 32px !default;
+
+$breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  'xxl': 1440px
+) !default;
+
+$position: (
+  'relative': relative,
+  'absolute': absolute,
+  'static': static,
+  'sticky': sticky
+) !default;
+
+$position-element: (
+  '0': 0px,
+) !default;
+
+$sizing: (
+  '0': 0,
+  'full': 100%,
+  'min': min-content,
+  'max': max-content,
+  'fit': fit-content
+) !default;
+
+$sizing-width: map.merge(('screen': '100vw'), $sizing) !default;
+$sizing-height: map.merge(('screen': '100vh'), $sizing) !default;
+
+$overflow: (
+  'hidden': hidden,
+  'scroll': scroll,
+  'visible': visible,
+  'auto': auto
+) !default;
+
+$text-align: (
+  'left': left,
+  'right': right,
+  'center': center,
+  'justify': justify
+) !default;
+
+$font-weight: (
+  'thin': 100,
+  'extralight': 200,
+  'light': 300,
+  'normal': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700,
+  'extrabold': 800,
+  'black': 900
+) !default;
+
+$text-size: (
+  'xs': 0.75rem,
+  'sm': 0.875rem,
+  'base': 1rem,
+  'lg': 1.125rem,
+  'xl': 1.25rem,
+  '2xl': 1.5rem,
+  '3xl': 1.875rem,
+  '4xl': 2.25rem,
+  '5xl': 3rem,
+  '6xl': 3.75rem,
+  '7xl': 4.5rem,
+  '8xl': 6rem,
+  '9xl': 8rem
+) !default;
+
+$spacing: (
+  'px': 1px,
+  '0': 0,
+  '1': .25rem,
+  '2': .5rem,
+  '3': .75rem,
+  '4': 1rem,
+  '5': 1.25rem,
+  '6': 1.5rem,
+  '8': 2rem,
+  '10': 2.5rem,
+  '12': 3rem,
+  '16': 4rem,
+  '20': 5rem,
+  '22': 5.5rem,
+  '24': 6rem,
+  '32': 8rem,
+  '36': 9rem,
+  '40': 10rem,
+  '48': 12rem,
+  '56': 14rem,
+  '64': 16rem,
+) !default;
+
+$grid-count: (
+  '1': 1fr,
+  '2': repeat(2, 1fr),
+  '3': repeat(3, 1fr),
+  '4': repeat(4, 1fr)
+) !default;
+
+$aspect-ratio: (
+  'auto': auto,
+  '4-3': "4/3",
+  'square': "1/1",
+  'wide': "16/9"
+);

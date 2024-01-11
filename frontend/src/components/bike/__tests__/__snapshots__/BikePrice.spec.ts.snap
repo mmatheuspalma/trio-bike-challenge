@@ -1,0 +1,7 @@
+// Vitest Snapshot v1
+
+exports[`BikeImageSelector > renders correctly 1`] = `
+"<div class=\\"bike__price\\" data-v-14e6ff3d=\\"\\"><strong data-v-14e6ff3d=\\"\\">135 €</strong>
+  <!--v-if-->
+</div>"
+`;
