@@ -6,7 +6,7 @@ Senior FullStack Engineer
 
 [Website](https://matheuspalma.com)
 [Linkedin](https://www.linkedin.com/in/matheus-palma)
-[Challenge Presentation Video]()
+[Challenge Presentation Video](https://youtu.be/sZW7BY7rQYw)
 
 
 #### Libraries Added
