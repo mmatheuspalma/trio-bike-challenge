@@ -4,9 +4,9 @@
 Matheus Palma
 Senior FullStack Engineer
 
-[Website](https://matheuspalma.com)
-[Linkedin](https://www.linkedin.com/in/matheus-palma)
-[Challenge Presentation Video](https://youtu.be/sZW7BY7rQYw)
+[Website](https://matheuspalma.com) <br/>
+[Linkedin](https://www.linkedin.com/in/matheus-palma) <br/>
+[Challenge Presentation Video](https://youtu.be/sZW7BY7rQYw) <br/>
 
 
 #### Libraries Added
