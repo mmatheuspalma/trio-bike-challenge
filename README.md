@@ -15,6 +15,12 @@ Senior FullStack Engineer
 
 #### Notes
 
+##### Commits
+I was working with separated repositories, that's why the git history is without the correct commits, commonly I work with the Git Flow patterns e.g ( feat(booking-calendar): Adding custom theme for booking calendar )
+
+
+##### Tests
+
 My intention was to add some tests for the application, but unfortunatelly I didn't had time enought due some personal issues.
 
 I would like to have the opportunity to write the Unit, E2e and API tests if possible.
