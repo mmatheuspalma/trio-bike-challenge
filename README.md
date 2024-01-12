@@ -19,7 +19,7 @@ My intention was to add some tests for the application, but unfortunatelly I did
 
 I would like to have the opportunity to write the Unit, E2e and API tests if possible.
 
-The tests that I was going to do if I have the chance:
+The tests that I was going to do if I have the chance ( it can be in a live coding interview ):
 - E2e Bike Rent
 - E2e Bike Amount/Pricing
 - E2e bike Rent Errors
